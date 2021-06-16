@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 function App() {
   const [buttonColor, setButtonColor] = useState("red");
   const changeColor = (e) => {
     setButtonColor(e.target.value);
   };
+
+  const add = (a, b) => a + b;
   return (
     <div>
       <div>
-        <p test-id="btnColor" style={{ color: buttonColor }}>{buttonColor}</p>
+        <p test-id="btnColor" style={{ color: buttonColor }}>
+          {buttonColor}
+        </p>
       </div>
       <label>Red</label>
       <input
@@ -24,7 +28,7 @@ function App() {
         onChange={changeColor}
       />
     </div>
-    )
+  );
 }
 
 export default App;
