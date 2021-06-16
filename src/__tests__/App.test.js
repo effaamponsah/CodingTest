@@ -35,3 +35,9 @@ test("color value should change after selecting", () => {
   app.find("input").first().simulate("change", changeColor);
   expect(app.find('[test-id="btnColor"]').text()).toBe('green')
 });
+
+test("should add something", () => {
+  let app = shallow(<App />);
+  let instance = app.instance();
+  expect(instance.sum(1,2)).toBe(3)
+});
